@@ -25,17 +25,18 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Pounds"
-            android:id="@+id/textView"
             android:layout_row="0"
             android:layout_column="1"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="-195dp"
+            android:id="@+id/view0" />
 
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/nameText"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:inputType="text" />
     </GridLayout>
 
     <GridLayout
@@ -98,7 +99,7 @@
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/euro"
-            android:id="@+id/Value2"
+            android:id="@+id/value2"
             android:layout_row="0"
             android:layout_column="1"
             android:layout_gravity="center_horizontal"
@@ -216,6 +217,40 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/gridLayout6"
+        android:layout_below="@+id/gridLayout7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="SGD"
+            android:id="@+id/textView12"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:background="#84b5ff" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/sgd"
+            android:id="@+id/value7"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/gridLayout5"
         android:layout_alignParentStart="true"
@@ -246,40 +281,6 @@
             android:background="#84b5ff"
             android:layout_marginLeft="10dp" />
 
-    </GridLayout>
-
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/gridLayout6"
-        android:layout_below="@+id/gridLayout7"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="SGD"
-            android:id="@+id/textView12"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:background="#84b5ff" />
-
-        <TextView
-            android:layout_width="250dp"
-            android:layout_height="30dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/sgd"
-            android:id="@+id/value7"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:background="#84b5ff"
-            android:layout_marginLeft="10dp" />
     </GridLayout>
 
 </RelativeLayout>

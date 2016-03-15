@@ -6,16 +6,20 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+// for pounds input
 import android.widget.EditText;
 import android.widget.TextView;
+import android.text.Editable;
 
-import java.text.NumberFormat;
+import java.text.NumberFormat; //for currency formatting
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final NumberFormat currencyFormat = NumberFormat. getCurrencyInstance();
 
     private double USDrate = 1.433;
     private double EUROrate = 9.313;
@@ -33,8 +37,18 @@ public class MainActivity extends AppCompatActivity {
     private double AUD;
     private double SGD;
 
+    private double Pounds=0.0;
 
-    private TextView USD;
+
+    private TextView USDTextView;
+    private TextView EUROTextView;
+    private TextView RMBTextView;
+    private TextView YENTextView;
+    private TextView CADTextView;
+    private TextView AUDTextView;
+    private TextView SGDTextView;
+
+
 
 
     @Override
@@ -43,27 +57,56 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-/*
-        USD = USDrate*Pounds;
+        USD= USDrate*Pounds;
         EURO = EUROrate*Pounds;
         RMB = RMBrate*Pounds;
         YEN = YENrate*Pounds;
         CAD = CADrate*Pounds;
         AUD = AUDrate*Pounds;
         SGD =SGDrate*Pounds;
-*/
-
 
 
         EditText nameText=(EditText) findViewById(R.id.nameText);
+        nameText.addTextChangedListener(amountEditTextWatcher);
 
-        String Pounds=nameText.getText().toString();
 
-        TextView ResultView = (TextView) findViewById(R.id.value1);
-        ResultView.setText("TOP!");
 
-        
+        USDTextView = (TextView) findViewById(R.id.value1);
 
+        USDTextView.setText(currencyFormat.format(USD));
+
+
+        EUROTextView = (TextView) findViewById(R.id.value2);
+
+        EUROTextView.setText(currencyFormat.format(EURO));
+
+
+        RMBTextView= (TextView) findViewById(R.id.value3);
+
+        RMBTextView.setText(currencyFormat.format(RMB));
+
+
+        YENTextView = (TextView) findViewById(R.id.value4);
+
+        YENTextView.setText(currencyFormat.format(YEN));
+
+
+        CADTextView = (TextView) findViewById(R.id.value5);
+
+        CADTextView.setText(currencyFormat.format(CAD));
+
+
+        AUDTextView = (TextView) findViewById(R.id.value6);
+
+        AUDTextView.setText(currencyFormat.format(AUD));
+
+
+        SGDTextView = (TextView) findViewById(R.id.value7);
+
+        SGDTextView.setText(currencyFormat.format(SGD));
+
+
+/*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -74,11 +117,37 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
 
 
+    private final TextWatcher amountEditTextWatcher = new TextWatcher() {
+
+        @Override
+
+    public void onTextChanged(CharSequence s, int start, int before, int count){
+
+            TextView Amountofpounds;
+            Amountofpounds =(TextView) findViewById(R.id.view0);
+            try{
+                Pounds=Double.parseDouble(s.toString()) / 100.0;
+                Amountofpounds.setText(currencyFormat.format(Pounds));
+            }
+            catch(NumberFormatException e) {
+                Amountofpounds.setText("");
+                Pounds = 0.0;
+
+            }
+        }
+
+    @Override
+    public void afterTextChanged(Editable s) { }
+
+    @Override
+    public void beforeTextChanged(
+            CharSequence s, int start, int count, int after) { }
+};
 
 
 
