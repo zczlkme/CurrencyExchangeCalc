@@ -128,14 +128,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void onTextChanged(CharSequence s, int start, int before, int count){
 
-            TextView Amountofpounds;
-            Amountofpounds =(TextView) findViewById(R.id.view0);
+            /* TextView Amountofpounds;
+            Amountofpounds =(TextView) findViewById(R.id.view0); */
+
             try{
-                Pounds=Double.parseDouble(s.toString()) / 100.0;
-                Amountofpounds.setText(currencyFormat.format(Pounds));
+
+                //get the currency data
+                Pounds=Double.parseDouble(s.toString())/100.0;
+
+                /*display the format in textview view0.
+                Amountofpounds.setText(""); */
             }
             catch(NumberFormatException e) {
-                Amountofpounds.setText("");
+
+                /* if the curreny is not a numble; pounds=0;
+                Amountofpounds.setText(""); */
                 Pounds = 0.0;
 
             }

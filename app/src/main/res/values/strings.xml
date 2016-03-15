@@ -9,4 +9,6 @@
     <string name="aud">0.00</string>
     <string name="sgd">0.00</string>
     <string name="pounds">Pounds</string>
+    <string name="Pounds">Text</string>
+    <string name="Viewamount">Enter Amount</string>
 </resources>
