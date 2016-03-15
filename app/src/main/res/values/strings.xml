@@ -11,4 +11,5 @@
     <string name="pounds">Pounds</string>
     <string name="Pounds">Text</string>
     <string name="Viewamount">Enter Amount</string>
+    <string name="Editthevalue">Enter Amount (£)</string>
 </resources>
