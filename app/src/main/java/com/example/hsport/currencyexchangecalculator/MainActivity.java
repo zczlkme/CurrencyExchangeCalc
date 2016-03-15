@@ -37,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private double AUD;
     private double SGD;
 
-    private double Pounds=0.0;
-
+    private double Pounds;
 
     private TextView USDTextView;
     private TextView EUROTextView;
@@ -47,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView CADTextView;
     private TextView AUDTextView;
     private TextView SGDTextView;
-
-
+    private TextView Amountofpounds;
 
 
     @Override
@@ -56,54 +54,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        USD= USDrate*Pounds;
-        EURO = EUROrate*Pounds;
-        RMB = RMBrate*Pounds;
-        YEN = YENrate*Pounds;
-        CAD = CADrate*Pounds;
-        AUD = AUDrate*Pounds;
-        SGD =SGDrate*Pounds;
-
-
-        EditText nameText=(EditText) findViewById(R.id.nameText);
+        EditText nameText = (EditText) findViewById(R.id.nameText);
         nameText.addTextChangedListener(amountEditTextWatcher);
 
+        Amountofpounds =(TextView) findViewById(R.id.view0);
+
+    }
+
+
+    private void calculate() {
+
+        USD = USDrate * Pounds;
+        EURO = EUROrate * Pounds;
+        RMB = RMBrate * Pounds;
+        YEN = YENrate * Pounds;
+        CAD = CADrate * Pounds;
+        AUD = AUDrate * Pounds;
+        SGD = SGDrate * Pounds;
 
 
         USDTextView = (TextView) findViewById(R.id.value1);
-
         USDTextView.setText(currencyFormat.format(USD));
 
-
         EUROTextView = (TextView) findViewById(R.id.value2);
-
         EUROTextView.setText(currencyFormat.format(EURO));
 
-
-        RMBTextView= (TextView) findViewById(R.id.value3);
-
+        RMBTextView = (TextView) findViewById(R.id.value3);
         RMBTextView.setText(currencyFormat.format(RMB));
 
-
         YENTextView = (TextView) findViewById(R.id.value4);
-
         YENTextView.setText(currencyFormat.format(YEN));
 
-
         CADTextView = (TextView) findViewById(R.id.value5);
-
         CADTextView.setText(currencyFormat.format(CAD));
 
-
         AUDTextView = (TextView) findViewById(R.id.value6);
-
         AUDTextView.setText(currencyFormat.format(AUD));
 
-
         SGDTextView = (TextView) findViewById(R.id.value7);
-
         SGDTextView.setText(currencyFormat.format(SGD));
+
+    }
 
 
 /*
@@ -118,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
-    }
 
 
 
@@ -126,26 +116,23 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
 
-    public void onTextChanged(CharSequence s, int start, int before, int count){
-
-            /* TextView Amountofpounds;
-            Amountofpounds =(TextView) findViewById(R.id.view0); */
+        public void onTextChanged(CharSequence s, int start, int before, int count){
 
             try{
 
                 //get the currency data
                 Pounds=Double.parseDouble(s.toString())/100.0;
 
-                /*display the format in textview view0.
-                Amountofpounds.setText(""); */
+                /*display the format in textview view0.*/
+                Amountofpounds.setText(currencyFormat.format(Pounds));
             }
             catch(NumberFormatException e) {
 
-                /* if the curreny is not a numble; pounds=0;
-                Amountofpounds.setText(""); */
+               /* if the curreny is not a numble; pounds=0;*/
+                Amountofpounds.setText("");
                 Pounds = 0.0;
-
             }
+            calculate();
         }
 
     @Override
@@ -157,22 +144,16 @@ public class MainActivity extends AppCompatActivity {
 };
 
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
         }
@@ -180,3 +161,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
