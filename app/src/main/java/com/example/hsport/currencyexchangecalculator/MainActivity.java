@@ -1,9 +1,5 @@
 package com.example.hsport.currencyexchangecalculator;
 
-<<<<<<< HEAD
-=======
-import android.content.Context;
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,25 +8,15 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD
 import android.widget.EditText;
 import android.widget.TextView;
 import android.text.Editable;
-=======
-// for pounds input
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.text.Editable;
-
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-<<<<<<< HEAD
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -38,15 +24,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private static final NumberFormat DecimalFormat = NumberFormat. getNumberInstance();
-=======
-import java.text.NumberFormat; //for currency formatting
-import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
-
-    private static final NumberFormat currencyFormat = NumberFormat. getCurrencyInstance();
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
     ArrayList<Double> rateArray = new ArrayList<>();
     ArrayList<URL> urlArray = new ArrayList<>();
 
@@ -84,28 +63,12 @@ public class MainActivity extends AppCompatActivity {
     private final String cad_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPCAD=X&f=sl1d1t1ba&e=.csv";
     private final String aud_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPAUD=X&f=sl1d1t1ba&e=.csv";
     private final String sgd_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPSGD=X&f=sl1d1t1ba&e=.csv";
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
-=======
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
-
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
         rateArray.add(USDrate);
         rateArray.add(EURrate);
         rateArray.add(RMBrate);
@@ -141,11 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                     String result = reader.readLine();
                     rateArray.set(i, Double.valueOf(result.substring(result.indexOf(',') + 1, result.indexOf(',') + 7)));
-<<<<<<< HEAD
 
-=======
-//                    System.out.println(i + "th rate is: " + rateArray.get(i));
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -172,10 +131,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         USDTextView = (TextView) findViewById(R.id.value1);
-        USDTextView.setText("$ "+ DecimalFormat.format(USD));
+        USDTextView.setText("$"+ DecimalFormat.format(USD));
 
         EUROTextView = (TextView) findViewById(R.id.value2);
-<<<<<<< HEAD
         EUROTextView.setText("€ "+ DecimalFormat.format(EUR));
 
         RMBTextView = (TextView) findViewById(R.id.value3);
@@ -183,15 +141,6 @@ public class MainActivity extends AppCompatActivity {
 
         YENTextView = (TextView) findViewById(R.id.value4);
         YENTextView.setText("¥ "+ DecimalFormat.format(JPY));
-=======
-        EUROTextView.setText(currencyFormat.format(EUR));
-
-        RMBTextView = (TextView) findViewById(R.id.value3);
-        RMBTextView.setText(currencyFormat.format(CNY));
-
-        YENTextView = (TextView) findViewById(R.id.value4);
-        YENTextView.setText(currencyFormat.format(JPY));
->>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
 
         CADTextView = (TextView) findViewById(R.id.value5);
         CADTextView.setText("$ "+ DecimalFormat.format(CAD));
@@ -200,9 +149,10 @@ public class MainActivity extends AppCompatActivity {
         AUDTextView.setText("$ "+ DecimalFormat.format(AUD));
 
         SGDTextView = (TextView) findViewById(R.id.value7);
-        SGDTextView.setText("$ "+ DecimalFormat.format(SGD));
+        SGDTextView.setText("$" + DecimalFormat.format(SGD));
 
     }
+
 
 
 
@@ -215,7 +165,9 @@ public class MainActivity extends AppCompatActivity {
 
             try{
 
+
                 Pounds=Double.parseDouble(s.toString())/100.0;
+
 
                 Amountofpounds.setText(DecimalFormat.format(Pounds));
             }
