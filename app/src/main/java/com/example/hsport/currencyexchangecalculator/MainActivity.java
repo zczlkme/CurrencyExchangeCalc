@@ -1,5 +1,6 @@
 package com.example.hsport.currencyexchangecalculator;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.text.Editable;
@@ -17,9 +19,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
     private double Pounds;
 
     private TextView USDTextView;
-    private TextView EUROTextView;
-    private TextView RMBTextView;
-    private TextView YENTextView;
+    private TextView EURTextView;
+    private TextView CNYTextView;
+    private TextView JPYTextView;
     private TextView CADTextView;
     private TextView AUDTextView;
     private TextView SGDTextView;
@@ -63,6 +65,13 @@ public class MainActivity extends AppCompatActivity {
     private final String cad_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPCAD=X&f=sl1d1t1ba&e=.csv";
     private final String aud_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPAUD=X&f=sl1d1t1ba&e=.csv";
     private final String sgd_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPSGD=X&f=sl1d1t1ba&e=.csv";
+
+
+    public void keyboard(){
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,14 +142,14 @@ public class MainActivity extends AppCompatActivity {
         USDTextView = (TextView) findViewById(R.id.value1);
         USDTextView.setText("$"+ DecimalFormat.format(USD));
 
-        EUROTextView = (TextView) findViewById(R.id.value2);
-        EUROTextView.setText("€ "+ DecimalFormat.format(EUR));
+        EURTextView = (TextView) findViewById(R.id.value2);
+        EURTextView.setText("€ " + DecimalFormat.format(EUR));
 
-        RMBTextView = (TextView) findViewById(R.id.value3);
-        RMBTextView.setText("¥ "+ DecimalFormat.format(CNY));
+        CNYTextView = (TextView) findViewById(R.id.value3);
+        CNYTextView.setText("¥ " + DecimalFormat.format(CNY));
 
-        YENTextView = (TextView) findViewById(R.id.value4);
-        YENTextView.setText("¥ "+ DecimalFormat.format(JPY));
+        JPYTextView = (TextView) findViewById(R.id.value4);
+        JPYTextView.setText("¥ " + DecimalFormat.format(JPY));
 
         CADTextView = (TextView) findViewById(R.id.value5);
         CADTextView.setText("$ "+ DecimalFormat.format(CAD));
@@ -177,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
                 Pounds = 0.0;
             }
             calculate();
+            keyboard();
         }
 
     @Override
@@ -204,5 +214,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
 
