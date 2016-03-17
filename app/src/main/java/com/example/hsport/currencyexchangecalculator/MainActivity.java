@@ -1,5 +1,6 @@
 package com.example.hsport.currencyexchangecalculator;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 // for pounds input
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.text.Editable;
@@ -21,6 +23,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.NumberFormat; //for currency formatting
 import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,10 +66,20 @@ public class MainActivity extends AppCompatActivity {
     private final String aud_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPAUD=X&f=sl1d1t1ba&e=.csv";
     private final String sgd_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPSGD=X&f=sl1d1t1ba&e=.csv";
 
+
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
 
         rateArray.add(USDrate);
         rateArray.add(EURrate);
