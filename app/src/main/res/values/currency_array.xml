@@ -2,9 +2,15 @@
 <resources>
     <string-array name="currency_array">
         <item>USD</item>
+<<<<<<< HEAD
         <item>EURO</item>
         <item>RMB</item>
         <item>YEN</item>
+=======
+        <item>EUR</item>
+        <item>CNY</item>
+        <item>JPY</item>
+>>>>>>> dbde66bcd065e518b5f2aa0f816eee057ed1b00c
         <item>CAD</item>
         <item>AUD</item>
         <item>SGD</item>
