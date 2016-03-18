@@ -140,25 +140,25 @@ public class MainActivity extends AppCompatActivity {
     private void calculate() {
 
         USDrateView = (TextView) findViewById(R.id.rate1);
-        USDrateView.setText(DecimalFormat.format(USDrate));
+        USDrateView.setText(DecimalFormat.format(rateArray.get(0)));
 
         EURrateView = (TextView) findViewById(R.id.rate2);
-        EURrateView.setText(DecimalFormat.format(EURrate));
+        EURrateView.setText(DecimalFormat.format(rateArray.get(1)));
 
         CNYrateView = (TextView) findViewById(R.id.rate3);
-        CNYrateView.setText(DecimalFormat.format(RMBrate));
+        CNYrateView.setText(DecimalFormat.format(rateArray.get(2)));
 
         JPYrateView = (TextView) findViewById(R.id.rate4);
-        JPYrateView.setText(DecimalFormat.format(JPYrate));
+        JPYrateView.setText(DecimalFormat.format(rateArray.get(3)));
 
         CADrateView = (TextView) findViewById(R.id.rate5);
-        CADrateView.setText(DecimalFormat.format(CADrate));
+        CADrateView.setText(DecimalFormat.format(rateArray.get(4)));
 
         AUDrateView = (TextView) findViewById(R.id.rate6);
-        AUDrateView.setText(DecimalFormat.format(AUDrate));
+        AUDrateView.setText(DecimalFormat.format(rateArray.get(5)));
 
         SGDrateView = (TextView) findViewById(R.id.rate7);
-        SGDrateView.setText(DecimalFormat.format(SGDrate));
+        SGDrateView.setText(DecimalFormat.format(rateArray.get(6)));
 
 
         USD = rateArray.get(0) * Pounds;
