@@ -58,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView SGDTextView;
     private TextView Amountofpounds;
 
+    private TextView USDrateView;
+    private TextView EURrateView;
+    private TextView CNYrateView;
+    private TextView JPYrateView;
+    private TextView CADrateView;
+    private TextView AUDrateView;
+    private TextView SGDrateView;
+
     private final String usd_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPUSD=X&f=sl1d1t1ba&e=.csv";
     private final String eur_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPEUR=X&f=sl1d1t1ba&e=.csv";
     private final String rmb_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPCNY=X&f=sl1d1t1ba&e=.csv";
@@ -128,7 +136,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     private void calculate() {
+
+        USDrateView = (TextView) findViewById(R.id.rate1);
+        USDrateView.setText(DecimalFormat.format(USDrate));
+
+        EURrateView = (TextView) findViewById(R.id.rate2);
+        EURrateView.setText(DecimalFormat.format(EURrate));
+
+        CNYrateView = (TextView) findViewById(R.id.rate3);
+        CNYrateView.setText(DecimalFormat.format(RMBrate));
+
+        JPYrateView = (TextView) findViewById(R.id.rate4);
+        JPYrateView.setText(DecimalFormat.format(JPYrate));
+
+        CADrateView = (TextView) findViewById(R.id.rate5);
+        CADrateView.setText(DecimalFormat.format(CADrate));
+
+        AUDrateView = (TextView) findViewById(R.id.rate6);
+        AUDrateView.setText(DecimalFormat.format(AUDrate));
+
+        SGDrateView = (TextView) findViewById(R.id.rate7);
+        SGDrateView.setText(DecimalFormat.format(SGDrate));
+
 
         USD = rateArray.get(0) * Pounds;
         EUR = rateArray.get(1) * Pounds;
@@ -178,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 Pounds=Double.parseDouble(s.toString())/100.0;
 
 
-                Amountofpounds.setText(DecimalFormat.format(Pounds));
+                Amountofpounds.setText("£ "+ DecimalFormat.format(Pounds));
             }
             catch(NumberFormatException e) {
 
