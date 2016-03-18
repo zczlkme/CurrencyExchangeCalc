@@ -4,15 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.text.Editable;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -22,8 +26,7 @@ import java.net.URL;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
-
-public class MainActivity extends AppCompatActivity {
+public class Rate extends AppCompatActivity {
 
     private static final NumberFormat DecimalFormat = NumberFormat. getNumberInstance();
 
@@ -31,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Double> rateArray = new ArrayList<>();
     ArrayList<URL> urlArray = new ArrayList<>();
 
-    private double USDrate = 1.43;
-    private double EURrate = 1.29;
-    private double RMBrate = 9.31;
-    private double JPYrate = 162.73;
-    private double CADrate = 1.90;
-    private double AUDrate = 1.91;
-    private double SGDrate = 1.97;
+    private double USDrate = 1.433;
+    private double EURrate = 1.290;
+    private double RMBrate = 9.313;
+    private double JPYrate = 162.728;
+    private double CADrate = 1.904;
+    private double AUDrate = 1.906;
+    private double SGDrate = 1.972;
 
     private double USD;
     private double EUR;
@@ -56,9 +59,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView CADTextView;
     private TextView AUDTextView;
     private TextView SGDTextView;
-
     private TextView Amountofpounds;
 
+    private TextView USDrateView;
+    private TextView EURrateView;
+    private TextView CNYrateView;
+    private TextView JPYrateView;
+    private TextView CADrateView;
+    private TextView AUDrateView;
+    private TextView SGDrateView;
 
     private final String usd_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPUSD=X&f=sl1d1t1ba&e=.csv";
     private final String eur_url = "http://download.finance.yahoo.com/d/quotes.csv?s=GBPEUR=X&f=sl1d1t1ba&e=.csv";
@@ -133,6 +142,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculate() {
 
+        USDrateView = (TextView) findViewById(R.id.rate1);
+        USDrateView.setText(DecimalFormat.format(rateArray.get(0)));
+
+        EURrateView = (TextView) findViewById(R.id.rate2);
+        EURrateView.setText(DecimalFormat.format(rateArray.get(1)));
+
+        CNYrateView = (TextView) findViewById(R.id.rate3);
+        CNYrateView.setText(DecimalFormat.format(rateArray.get(2)));
+
+        JPYrateView = (TextView) findViewById(R.id.rate4);
+        JPYrateView.setText(DecimalFormat.format(rateArray.get(3)));
+
+        CADrateView = (TextView) findViewById(R.id.rate5);
+        CADrateView.setText(DecimalFormat.format(rateArray.get(4)));
+
+        AUDrateView = (TextView) findViewById(R.id.rate6);
+        AUDrateView.setText(DecimalFormat.format(rateArray.get(5)));
+
+        SGDrateView = (TextView) findViewById(R.id.rate7);
+        SGDrateView.setText(DecimalFormat.format(rateArray.get(6)));
 
 
         USD = rateArray.get(0) * Pounds;
@@ -194,13 +223,13 @@ public class MainActivity extends AppCompatActivity {
             keyboard();
         }
 
-    @Override
-    public void afterTextChanged(Editable s) { }
+        @Override
+        public void afterTextChanged(Editable s) { }
 
-    @Override
-    public void beforeTextChanged(
-            CharSequence s, int start, int count, int after) { }
-};
+        @Override
+        public void beforeTextChanged(
+                CharSequence s, int start, int count, int after) { }
+    };
 
 
     @Override
