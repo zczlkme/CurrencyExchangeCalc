@@ -249,16 +249,6 @@
 
     </GridLayout>
 
-    <Button
-        android:layout_width="108dp"
-        android:layout_height="53dp"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_marginRight="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="-4.5dp" />
 
 </RelativeLayout>
 

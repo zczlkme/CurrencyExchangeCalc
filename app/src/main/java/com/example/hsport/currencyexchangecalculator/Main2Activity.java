@@ -115,8 +115,7 @@ public class Main2Activity extends AppCompatActivity {
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                     String result = reader.readLine();
-                    rateArray.set(i, Double.valueOf(result.substring(result.indexOf(',') + 1, result.indexOf(',') + 7)));
-
+                    rateArray.set(i, Double.valueOf(result.substring(result.indexOf(',') + 1, result.indexOf(',') + 7)));   
                 }
             } catch (Exception e) {
                 e.printStackTrace();
