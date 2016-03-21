@@ -23,18 +23,15 @@ public class Rate extends AppCompatActivity {
     ArrayList<Double> rateArray = new ArrayList<>();
     ArrayList<URL> urlArray = new ArrayList<>();
 
-    private double USDrate= 1.43;
-    private double EURrate= 1.29;
-    private double RMBrate= 9.31;
-    private double JPYrate= 162.73;
-    private double CADrate= 1.91;
-    private double AUDrate= 1.91;
-    private double SGDrate= 1.97;
+    private double USDrate = 1.43;
+    private double EURrate = 1.29;
+    private double RMBrate = 9.31;
+    private double JPYrate = 162.73;
+    private double CADrate = 1.91;
+    private double AUDrate = 1.91;
+    private double SGDrate = 1.97;
 
 
-
-
-    private TextView Amountofpounds;
 
     private TextView USDrateView;
     private TextView EURrateView;
@@ -54,7 +51,7 @@ public class Rate extends AppCompatActivity {
 
 
 
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate);
@@ -67,11 +64,13 @@ public class Rate extends AppCompatActivity {
         rateArray.add(AUDrate);
         rateArray.add(SGDrate);
 
-
-        new GetOnlineRate().execute();
         rate();
 
+        new GetOnlineRate().execute();
+
+
     }
+
 
 
     class GetOnlineRate extends AsyncTask<String, Void, Void> {
@@ -94,6 +93,13 @@ public class Rate extends AppCompatActivity {
                     rateArray.set(i, Double.valueOf(result.substring(result.indexOf(',') + 1, result.indexOf(',') + 7)));
                 }
 
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        rate();
+                    }
+                });
+
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -106,32 +112,38 @@ public class Rate extends AppCompatActivity {
     }
 
 
-
-    private  void  rate() {
+    private  void  rate(){
 
 
         USDrateView = (TextView) findViewById(R.id.rate1);
         USDrateView.setText(DecimalFormat.format(rateArray.get(0)));
 
+
         EURrateView = (TextView) findViewById(R.id.rate2);
         EURrateView.setText(DecimalFormat.format(rateArray.get(1)));
+
 
         CNYrateView = (TextView) findViewById(R.id.rate3);
         CNYrateView.setText(DecimalFormat.format(rateArray.get(2)));
 
+
         JPYrateView = (TextView) findViewById(R.id.rate4);
         JPYrateView.setText(DecimalFormat.format(rateArray.get(3)));
+
 
         CADrateView = (TextView) findViewById(R.id.rate5);
         CADrateView.setText(DecimalFormat.format(rateArray.get(4)));
 
+
         AUDrateView = (TextView) findViewById(R.id.rate6);
         AUDrateView.setText(DecimalFormat.format(rateArray.get(5)));
+
 
         SGDrateView = (TextView) findViewById(R.id.rate7);
         SGDrateView.setText(DecimalFormat.format(rateArray.get(6)));
 
     }
+
 
 
 
