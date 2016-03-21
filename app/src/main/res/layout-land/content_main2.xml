@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hsport.currencyexchangecalculator.Main2Activity"
+    tools:showIn="@layout/activity_main2"
+    android:background="#ffffff"
+    android:backgroundTintMode="src_in">
+
+    <GridLayout
+        android:layout_width="600dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:id="@+id/gridLayout8"
+        android:layout_marginTop="0dp"
+        android:elevation="@dimen/abc_text_size_body_1_material"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:focusableInTouchMode="false">
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:id="@+id/nameText"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="-347dp"
+            android:id="@+id/view0"
+            android:hint="@string/Viewamount"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/gridLayout">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="USD"
+            android:id="@+id/textView14"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:autoText="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/usd"
+            android:id="@+id/value1"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/gridLayout2">
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/gridLayout3">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="CNY"
+            android:id="@+id/textView4"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/cny"
+            android:id="@+id/value3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/gridLayout3"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout4">
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/gridLayout5">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="CAD"
+            android:id="@+id/textView8"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/cad"
+            android:id="@+id/value5"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout6"
+        android:layout_below="@+id/gridLayout7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView10">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="SGD"
+            android:id="@+id/textView12"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/sgd"
+            android:id="@+id/value7"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff"
+            android:layout_marginLeft="10dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/gridLayout5"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout7">
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="EUR"
+        android:id="@+id/textView2"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#84b5ff"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/gridLayout"
+        android:layout_toEndOf="@+id/gridLayout" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/eur"
+        android:id="@+id/value2"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#84b5ff"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="JPY"
+        android:id="@+id/textView6"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#84b5ff"
+        android:layout_alignTop="@+id/gridLayout3"
+        android:layout_toEndOf="@+id/gridLayout3"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/jpy"
+        android:id="@+id/value4"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#84b5ff"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AUD"
+        android:id="@+id/textView10"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#84b5ff"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/gridLayout5"
+        android:layout_toEndOf="@+id/gridLayout5" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/aud"
+        android:id="@+id/value6"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#84b5ff"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10" />
+
+</RelativeLayout>
