@@ -35,7 +35,7 @@ public class Main2Activity extends AppCompatActivity {
     private double EURrate = 1.29;
     private double RMBrate = 9.31;
     private double JPYrate = 162.73;
-    private double CADrate = 1.90;
+    private double CADrate = 1.91;
     private double AUDrate = 1.91;
     private double SGDrate = 1.97;
 

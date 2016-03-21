@@ -1,18 +1,9 @@
 package com.example.hsport.currencyexchangecalculator;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextWatcher;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.text.Editable;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -32,13 +23,13 @@ public class Rate extends AppCompatActivity {
     ArrayList<Double> rateArray = new ArrayList<>();
     ArrayList<URL> urlArray = new ArrayList<>();
 
-    private double USDrate ;
-    private double EURrate ;
-    private double RMBrate ;
-    private double JPYrate ;
-    private double CADrate ;
-    private double AUDrate ;
-    private double SGDrate ;
+    private double USDrate= 1.43;
+    private double EURrate= 1.29;
+    private double RMBrate= 9.31;
+    private double JPYrate= 162.73;
+    private double CADrate= 1.91;
+    private double AUDrate= 1.91;
+    private double SGDrate= 1.97;
 
 
 
