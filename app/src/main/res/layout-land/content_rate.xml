@@ -262,6 +262,94 @@
         android:layout_above="@+id/gridLayout7"
         android:layout_toEndOf="@+id/textView10" />
 
-
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="USD"
+        android:id="@+id/buttonusd"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="EUR"
+        android:id="@+id/buttoneur"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toStartOf="@+id/rate2"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="CNY"
+        android:id="@+id/buttoncny"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/gridLayout7"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="170dp"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="JPY"
+        android:id="@+id/buttonjpy"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:layout_above="@+id/gridLayout4"
+        android:layout_toStartOf="@+id/rate4"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="CAD"
+        android:id="@+id/buttoncad"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/gridLayout7"
+        android:layout_marginBottom="108dp"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="AUD"
+        android:id="@+id/buttonaud"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:layout_alignBottom="@+id/gridLayout5"
+        android:layout_toStartOf="@+id/rate6"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="SGD"
+        android:id="@+id/buttonsgd"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#84b5ff"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-40dp"
+        android:textSize="20dp" />
 </RelativeLayout>
 

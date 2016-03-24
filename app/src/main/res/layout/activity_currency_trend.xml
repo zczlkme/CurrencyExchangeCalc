@@ -9,20 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hsport.currencyexchangecalculator.CurrencyTrend">
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_from"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/spinner_from"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="57dp"
-        android:id="@+id/container"></FrameLayout>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -37,7 +24,7 @@
             android:id="@+id/linetext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="currency"
+            android:text="USD"
             android:textSize="16dp"
             android:layout_above="@+id/graph"
             android:layout_centerHorizontal="true" />
@@ -45,11 +32,27 @@
         <com.jjoe64.graphview.GraphView
             android:layout_width="match_parent"
             android:layout_height="200dip"
-            android:title="currency"
+            android:title="USD"
             android:id="@+id/graph"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="55dp"
             android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:src="@drawable/usd"
+            android:layout_above="@+id/linetext"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/trend1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 

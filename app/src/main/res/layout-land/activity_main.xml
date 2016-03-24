@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hsport.currencyexchangecalculator.MainActivity"
-    android:background="#2e71d6"
+    android:background="@drawable/compassnew1"
     android:contextClickable="false">
 
     <Button
@@ -17,7 +17,7 @@
         android:text="Currency Calculator"
 
         android:id="@+id/Bt"
-        android:background="#ffffff"
+        android:background="@drawable/blank"
         android:textSize="16dp"
         android:elevation="@dimen/abc_action_bar_subtitle_bottom_margin_material"
         android:layout_below="@+id/textView3"
@@ -29,18 +29,18 @@
         android:layout_height="40dp"
         android:text="Exchange Rate"
         android:id="@+id/Bt1"
-        android:background="#ffffff"
+        android:background="@drawable/blank"
         android:textSize="16dp"
-        android:layout_above="@+id/Bt2"
+        android:layout_below="@+id/Bt"
         android:layout_alignStart="@+id/Bt"
-        android:layout_marginBottom="35dp" />
+        android:layout_marginTop="53dp" />
 
     <Button
         android:layout_width="400dp"
         android:layout_height="40dp"
         android:text="Group info"
         android:id="@+id/Bt2"
-        android:background="#ffffff"
+        android:background="@drawable/blank"
         android:textSize="16dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/Bt1"

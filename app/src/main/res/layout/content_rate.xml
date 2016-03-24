@@ -30,6 +30,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:background="#84b5ff"
+
             android:autoText="true" />
 
         <TextView
@@ -60,19 +61,20 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="EUR"
             android:id="@+id/textView2"
-            android:layout_row="0"
-            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_column="1"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#84b5ff" />
+            android:background="#84b5ff"
+            />
 
         <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/rate2"
-            android:layout_row="0"
-            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_column="2"
             android:background="#84b5ff"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center_vertical"
@@ -98,7 +100,8 @@
             android:layout_column="0"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#84b5ff" />
+            android:background="#84b5ff"
+            />
 
         <TextView
             android:layout_width="250dp"
@@ -132,7 +135,8 @@
             android:layout_column="0"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#84b5ff" />
+            android:background="#84b5ff"
+            />
 
         <TextView
             android:layout_width="250dp"
@@ -196,18 +200,19 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="SGD"
             android:id="@+id/textView12"
-            android:layout_row="0"
+            android:layout_row="1"
             android:layout_column="0"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#84b5ff" />
+            android:background="#84b5ff"
+            />
 
         <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/rate7"
-            android:layout_row="0"
+            android:layout_row="1"
             android:layout_column="1"
             android:background="#84b5ff"
             android:layout_marginLeft="10dp"
@@ -233,7 +238,8 @@
             android:layout_column="0"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#84b5ff" />
+            android:background="#84b5ff"
+            />
 
         <TextView
             android:layout_width="250dp"
@@ -248,6 +254,105 @@
             android:gravity="center" />
 
     </GridLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="USD"
+        android:id="@+id/buttonusd"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:background="#00a3ee"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="EUR"
+        android:id="@+id/buttoneur"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignStart="@+id/buttonusd"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="-297dp"
+        android:background="#00a3ee"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="CNY"
+        android:id="@+id/buttoncny"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#00a3ee"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-245dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="JPY"
+        android:id="@+id/buttonjpy"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#00a3ee"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-196dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="CAD"
+        android:id="@+id/buttoncad"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#00a3ee"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-146dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="AUD"
+        android:id="@+id/buttonaud"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#00a3ee"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-90dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="SGD"
+        android:id="@+id/buttonsgd"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginLeft="0dp"
+        android:background="#00a3ee"
+        android:layout_below="@+id/gridLayout6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-40dp"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>

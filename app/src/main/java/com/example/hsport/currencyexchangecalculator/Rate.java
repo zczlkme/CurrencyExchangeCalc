@@ -1,8 +1,13 @@
 package com.example.hsport.currencyexchangecalculator;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -16,6 +21,13 @@ import java.util.ArrayList;
 
 public class Rate extends AppCompatActivity {
 
+    public Button btusd ;
+    public Button bteur ;
+    public Button btcny ;
+    public Button btjpy ;
+    public Button btcad ;
+    public Button btaud ;
+    public Button btsgd ;
 
     private static final NumberFormat DecimalFormat = NumberFormat. getNumberInstance();
 
@@ -67,11 +79,94 @@ public class Rate extends AppCompatActivity {
         rate();
 
         new GetOnlineRate().execute();
+        btusd = (Button) findViewById(R.id.buttonusd);
+        btusd.setOnClickListener(new ButtonListener1());
 
+        bteur = (Button) findViewById(R.id.buttoneur);
+        bteur.setOnClickListener(new ButtonListener2());
 
+        btcny = (Button) findViewById(R.id.buttoncny);
+        btcny.setOnClickListener(new ButtonListener3());
+
+        btjpy = (Button) findViewById(R.id.buttonjpy);
+        btjpy.setOnClickListener(new ButtonListener4());
+
+        btcad = (Button) findViewById(R.id.buttoncad);
+        btcad.setOnClickListener(new ButtonListener5());
+
+        btaud = (Button) findViewById(R.id.buttonaud);
+        btaud.setOnClickListener(new ButtonListener6());
+
+        btsgd = (Button) findViewById(R.id.buttonsgd);
+        btsgd.setOnClickListener(new ButtonListener7());
     }
 
 
+    class ButtonListener1 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
+    class ButtonListener2 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend1.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
+    class ButtonListener3 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend2.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
+
+    class ButtonListener4 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend3.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
+
+    class ButtonListener5 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend4.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
+    class ButtonListener6 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend5.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
+    class ButtonListener7 implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent();
+            intent.setClass(Rate.this, CurrencyTrend6.class);
+            Rate.this.startActivity(intent);
+
+
+        }
+    }
 
     class GetOnlineRate extends AsyncTask<String, Void, Void> {
 
@@ -145,7 +240,24 @@ public class Rate extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+// Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+// Handle action bar item clicks here. The action bar will
+// automatically handle clicks on the Home/Up button, so long
+// as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 
 

@@ -57,6 +57,104 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CurrencyTrend"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyTrend1"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyTrend2"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyTrend3"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyTrend4"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyTrend5"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyTrend6"
+            android:label="@string/app_name"
+            android:parentActivityName=".Rate">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Rate" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
