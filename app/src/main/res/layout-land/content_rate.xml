@@ -273,7 +273,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:textSize="20dp" />
     <Button
         android:layout_width="100dp"
@@ -283,7 +283,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:layout_alignTop="@+id/textView2"
         android:layout_toStartOf="@+id/rate2"
         android:textSize="20dp" />
@@ -295,7 +295,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/gridLayout7"
         android:layout_marginTop="0dp"
@@ -309,7 +309,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:layout_above="@+id/gridLayout4"
         android:layout_toStartOf="@+id/rate4"
         android:textSize="20dp" />
@@ -321,7 +321,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/gridLayout7"
         android:layout_marginBottom="108dp"
@@ -334,7 +334,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:layout_alignBottom="@+id/gridLayout5"
         android:layout_toStartOf="@+id/rate6"
         android:textSize="20dp" />
@@ -346,10 +346,18 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#84b5ff"
+        android:background="#00a3ee"
         android:layout_below="@+id/gridLayout6"
         android:layout_alignParentStart="true"
         android:layout_marginTop="-40dp"
         android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*click currency to view the trend"
+        android:id="@+id/textView24"
+        android:layout_below="@+id/buttonsgd"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 
