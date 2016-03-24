@@ -29,8 +29,10 @@ public class CurrencyTrend5 extends AppCompatActivity {
     private TextView maxview;
     ArrayList<Double> rateArray = new ArrayList<>();
     ArrayList<String> timeArray = new ArrayList<>();
+    ArrayList<String> maxtimeArray= new ArrayList<>();
     double max_rate = 0;
     String max_month ="";
+    String time="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,27 +78,8 @@ public class CurrencyTrend5 extends AppCompatActivity {
 
         protected Void doInBackground(String... urls) {
         try {
-            rateArray.add(rate1);
-            rateArray.add(rate2);
-            rateArray.add(rate3);
-            rateArray.add(rate4);
-            rateArray.add(rate5);
+           findthemax();
 
-            timeArray.add("Mar 21");
-            timeArray.add("Mar 21 noon");
-            timeArray.add("Mar 22");
-            timeArray.add("Mar 22 noon");
-            timeArray.add("Mar 23");
-
-
-            for (int i = 0; i < rateArray.size(); i++) {
-                if (rateArray.get(i) > max_rate) {
-                    max_rate = rateArray.get(i);
-                    max_month = timeArray.get(i);
-
-                }
-
-            }
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -112,6 +95,54 @@ public class CurrencyTrend5 extends AppCompatActivity {
 
         return  null;
     }
+    }
+    void findthemax(){
+        rateArray.add(rate1);
+        rateArray.add(rate2);
+        rateArray.add(rate3);
+        rateArray.add(rate4);
+        rateArray.add(rate5);
+
+        timeArray.add("Mar 21");
+        timeArray.add("Mar 21 noon");
+        timeArray.add("Mar 22");
+        timeArray.add("Mar 22 noon");
+        timeArray.add("Mar 23");
+
+
+
+        for (int i = 0; i < rateArray.size(); i++) {
+            if (rateArray.get(i) > max_rate) {
+                max_rate = rateArray.get(i);
+
+
+            }
+
+        }
+
+        for (int i = 0; i < rateArray.size(); i++) {
+            if (rateArray.get(i) ==max_rate) {
+
+                max_month = timeArray.get(i);
+                maxtimeArray.add(max_month);
+            }
+
+        }
+
+        for (int i = 0; i < maxtimeArray.size()-1; i++) {
+            if(maxtimeArray.size()==1){
+                break;
+
+            }
+            else{
+                time +=maxtimeArray.get(i);
+                time +=",";
+            }
+
+        }
+
+        time +=maxtimeArray.get(maxtimeArray.size()-1);
+        time +=".";
     }
 
 }

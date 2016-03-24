@@ -23,14 +23,15 @@ public class CurrencyTrend3 extends AppCompatActivity {
     double rate1 = 159.6;
     double rate2 = 158.4;
     double rate3 = 158.9;
-    double rate4 = 159;
+    double rate4 = 159.6;
     double rate5 = 158.2;
     private TextView maxview;
     ArrayList<Double> rateArray = new ArrayList<>();
     ArrayList<String> timeArray = new ArrayList<>();
+    ArrayList<String> maxtimeArray = new ArrayList<>();
     double max_rate = 0;
     String max_month ="";
-
+    String time="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class CurrencyTrend3 extends AppCompatActivity {
                         new DataPoint(0, 8),
                         new DataPoint(1, 2),
                         new DataPoint(2, 4.5),
-                        new DataPoint(3, 5),
+                        new DataPoint(3, 8),
                         new DataPoint(4, 1)
                 });
 
@@ -69,32 +70,14 @@ public class CurrencyTrend3 extends AppCompatActivity {
 
         protected Void doInBackground(String... urls) {
             try {
-                rateArray.add(rate1);
-                rateArray.add(rate2);
-                rateArray.add(rate3);
-                rateArray.add(rate4);
-                rateArray.add(rate5);
 
-                timeArray.add("Mar 21");
-                timeArray.add("Mar 21 noon");
-                timeArray.add("Mar 22");
-                timeArray.add("Mar 22 noon");
-                timeArray.add("Mar 23");
+                findthemax();
 
-
-                for (int i = 0; i < rateArray.size(); i++) {
-                    if (rateArray.get(i) > max_rate) {
-                        max_rate = rateArray.get(i);
-                        max_month = timeArray.get(i);
-
-                    }
-
-                }
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         maxview = (TextView) findViewById(R.id.textView17);
-                        maxview.setText("The max rate is " + max_rate + " happend at " + max_month);
+                        maxview.setText("The max rate is " + max_rate + " happend at " + time);
                     }
                 });
 
@@ -107,6 +90,54 @@ public class CurrencyTrend3 extends AppCompatActivity {
         }
     }
 
+    void findthemax(){
+        rateArray.add(rate1);
+        rateArray.add(rate2);
+        rateArray.add(rate3);
+        rateArray.add(rate4);
+        rateArray.add(rate5);
+
+        timeArray.add("Mar 21");
+        timeArray.add("Mar 21 noon");
+        timeArray.add("Mar 22");
+        timeArray.add("Mar 22 noon");
+        timeArray.add("Mar 23");
+
+
+
+        for (int i = 0; i < rateArray.size(); i++) {
+            if (rateArray.get(i) > max_rate) {
+                max_rate = rateArray.get(i);
+
+
+            }
+
+        }
+
+        for (int i = 0; i < rateArray.size(); i++) {
+            if (rateArray.get(i) ==max_rate) {
+
+                max_month = timeArray.get(i);
+                maxtimeArray.add(max_month);
+            }
+
+        }
+
+        for (int i = 0; i < maxtimeArray.size()-1; i++) {
+            if(maxtimeArray.size()==1){
+                break;
+
+            }
+            else{
+                time +=maxtimeArray.get(i);
+                time +=",";
+            }
+
+        }
+
+        time +=maxtimeArray.get(maxtimeArray.size()-1);
+        time +=".";
+    }
 
 }
 
