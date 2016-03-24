@@ -354,14 +354,6 @@
         android:layout_marginTop="-40dp"
         android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="*click currency to view the trend"
-        android:id="@+id/textView23"
-        android:layout_below="@+id/gridLayout6"
-        android:layout_alignParentStart="true" />
-
 
 </RelativeLayout>
 

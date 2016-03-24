@@ -23,7 +23,7 @@
             android:id="@+id/linetext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CAD PER 1 GBP"
+            android:text="CAD"
             android:textSize="16dp"
             android:layout_above="@+id/graph"
             android:layout_centerHorizontal="true" />
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dip"
             android:title="CAD"
-
+            android:src="@drawable/cad"
             android:id="@+id/graph"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="55dp"
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/imageView6"
-            android:src="@drawable/cadnew"
+            android:src="@drawable/cad"
             android:layout_above="@+id/linetext"
             android:layout_alignParentEnd="true" />
 

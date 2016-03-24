@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/marvelnew3"
+        android:src="@drawable/marvel3"
         android:id="@+id/imageView2"
         android:layout_marginLeft="0dp"
         android:layout_below="@+id/imageView4"
@@ -22,7 +22,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/marvelnew2"
+        android:src="@drawable/marvel2"
         android:id="@+id/imageView3"
         android:layout_marginLeft="0dp"
         android:layout_alignParentBottom="true"
@@ -30,7 +30,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/marvelnew1"
+        android:src="@drawable/marvel1"
         android:id="@+id/imageView4"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="37dp"

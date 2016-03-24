@@ -62,8 +62,19 @@
         android:layout_below="@+id/gridLayout2"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
-        android:id="@+id/gridLayout3"
-        android:layout_marginLeft="100dp">
+        android:id="@+id/gridLayout3">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="CNY"
+            android:id="@+id/textView4"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff" />
 
         <TextView
             android:layout_width="150dp"
@@ -95,8 +106,19 @@
         android:layout_below="@+id/gridLayout4"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
-        android:id="@+id/gridLayout5"
-        android:layout_marginLeft="100dp">
+        android:id="@+id/gridLayout5">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="CAD"
+            android:id="@+id/textView8"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#84b5ff" />
 
         <TextView
             android:layout_width="150dp"
@@ -251,7 +273,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
+        android:background="#84b5ff"
         android:textSize="20dp" />
     <Button
         android:layout_width="100dp"
@@ -261,7 +283,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
+        android:background="#84b5ff"
         android:layout_alignTop="@+id/textView2"
         android:layout_toStartOf="@+id/rate2"
         android:textSize="20dp" />
@@ -273,10 +295,12 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
-        android:textSize="20dp"
-        android:layout_above="@+id/gridLayout4"
-        android:layout_alignParentStart="true" />
+        android:background="#84b5ff"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/gridLayout7"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="170dp"
+        android:textSize="20dp" />
     <Button
         android:layout_width="100dp"
         android:layout_height="40dp"
@@ -285,7 +309,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
+        android:background="#84b5ff"
         android:layout_above="@+id/gridLayout4"
         android:layout_toStartOf="@+id/rate4"
         android:textSize="20dp" />
@@ -297,10 +321,11 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
-        android:textSize="20dp"
-        android:layout_alignTop="@+id/textView10"
-        android:layout_alignParentStart="true" />
+        android:background="#84b5ff"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/gridLayout7"
+        android:layout_marginBottom="108dp"
+        android:textSize="20dp" />
     <Button
         android:layout_width="100dp"
         android:layout_height="40dp"
@@ -309,7 +334,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
+        android:background="#84b5ff"
         android:layout_alignBottom="@+id/gridLayout5"
         android:layout_toStartOf="@+id/rate6"
         android:textSize="20dp" />
@@ -321,18 +346,10 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_marginLeft="0dp"
-        android:background="#00a3ee"
+        android:background="#84b5ff"
         android:layout_below="@+id/gridLayout6"
         android:layout_alignParentStart="true"
         android:layout_marginTop="-40dp"
         android:textSize="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="*click currency to view the trend"
-        android:id="@+id/textView24"
-        android:layout_below="@+id/gridLayout6"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>
 
