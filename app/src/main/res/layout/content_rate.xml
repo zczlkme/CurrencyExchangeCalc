@@ -360,7 +360,7 @@
         android:text="*click currency to view the trend"
         android:id="@+id/textView23"
         android:layout_below="@+id/gridLayout6"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
